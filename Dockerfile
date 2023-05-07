@@ -3,7 +3,6 @@ FROM ubuntu:22.04
 RUN apt-get update && \
     apt-get -y upgrade && \
     apt install -y python3 && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -yq libpq-dev gcc python3.8 python3-pip && \
     apt-get clean
 
 WORKDIR /sample-app
