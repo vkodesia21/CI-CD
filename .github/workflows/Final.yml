@@ -29,10 +29,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        sudo apt update 
-        sudo apt install -y python3
-        python3 --version
-        python3 -m pip install --upgrade pip
         pip install flake8
         if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
     
