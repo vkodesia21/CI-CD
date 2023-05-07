@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.9]
+        python-version: [3.11]
 
     steps:
     - uses: actions/checkout@v2
@@ -34,7 +34,7 @@ jobs:
         pip3 install flask==2.3.2
         pip3 install flask-migrate
         pip3 install flask-sqlalchemy
-        if [ -f requirements.txt ]; then python3 -m pip install -r requirements.txt; fi
+        if [ -f requirements.txt ]; then python3 -m pip3 install -r requirements.txt; fi
     
     - name: Lint the code with flake8
       run: |
