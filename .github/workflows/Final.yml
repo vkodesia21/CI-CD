@@ -58,7 +58,7 @@ jobs:
         with:
           username: vkodesia21
           password: Vanshdocker21
-          repository: https://hub.docker.com/repository/docker/vkodesia21/ci_cd/general
+          repository: vkodesia21/ci_cd
           tag_with_ref: true
           tag_with_sha: true
           tags: latest
