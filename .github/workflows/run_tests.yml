@@ -32,7 +32,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8
         pip install flask==2.2.2
-        pip install flask_sqlalchemy
+        pip install flask_sqlalchemy==2.5.1
         pip install flask_migrate
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     
