@@ -1,6 +1,6 @@
-from app import db
+from app import app,db
 from app.models import Menu
-
+app.app_context().push()
 class Seeder(object):
     def populate_database(self):
         record = Menu.query.first()
