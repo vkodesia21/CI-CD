@@ -1,26 +1,17 @@
-[![Build Status](https://travis-ci.org/edonosotti/ci-cd-tutorial-sample-app.svg?branch=master)](https://travis-ci.org/edonosotti/ci-cd-tutorial-sample-app)
-[![codebeat badge](https://codebeat.co/badges/0e006c74-a2f9-4f34-9cf4-2378fb7d995a)](https://codebeat.co/projects/github-com-edonosotti-ci-cd-tutorial-sample-app-master)
-[![Maintainability](https://api.codeclimate.com/v1/badges/e14a2647843de209fd5e/maintainability)](https://codeclimate.com/github/edonosotti/ci-cd-tutorial-sample-app/maintainability)
 
 # CD/CI Application
 
 ## Description
 
-This sample Python REST API application was written for a tutorial on implementing Continuous Integration and Delivery pipelines.
-
-It demonstrates how to:
-
-* Write a basic REST API using the [Flask](http://flask.pocoo.org) microframework
+* We have written a basic REST API using the [Flask](http://flask.pocoo.org) microframework
 * Basic database operations and migrations using the Flask wrappers around [Alembic](https://bitbucket.org/zzzeek/alembic) and [SQLAlchemy](https://www.sqlalchemy.org)
-* Write automated unit tests with [unittest](https://docs.python.org/2/library/unittest.html)
+* Written automated unit tests with [unittest](https://docs.python.org/2/library/unittest.html)
 
 ## Requirements
 
 * `Python 3.8`
 * `Pip`
 * `virtualenv`, or `conda`, or `miniconda`
-
-
 
 ## Installation
 
@@ -70,18 +61,6 @@ $ gunicorn app:app -b 0.0.0.0:8000
 Run:
 
 ```
-$ docker build -t ci-cd-tutorial-sample-app:latest .
+$ docker build -t ci-cd-app:latest .
 $ docker run -d -p 8000:8000 ci-cd-tutorial-sample-app:latest
-```
-
-## Deploying to Heroku
-
-Run:
-
-```sh
-$ heroku create
-$ git push heroku master
-$ heroku run flask db upgrade
-$ heroku run python seed.py
-$ heroku open
 ```
